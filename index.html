@@ -9,5 +9,22 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <div class="container">
+      <img
+        src="https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      />
+      <h1 id="current-time">12:00:00</h1>
+      <div class="quotes">
+        <p>TODAY'S QUOTES</p>
+        <h2>Lost time is never found again.</h2>
+      </div>
+      <script>
+        let time = document.getElementById('current-time');
+        setInterval(() => {
+          let d = new Data();
+          time.innerHTML = d.toLocaleTimeString();
+        }, 1000);
+      </script>
+    </div>
   </body>
 </html>
